@@ -1,0 +1,19 @@
+Gulp Tasks
+------------------------
+build, b                    Runs the production and staging Tasks
+
+production                  Sets production variable and compiles project.
+                                Project is saved to the production directory.
+staging                     Sets staging variable and compiles project.
+                                Project is saved to staging directory.
+serve-production, sp        Sets the Production environment variable and serves
+                                the files in the production build directory
+serve-staging, ss           Sets the Staging environment variable and serves
+                                the files in the staging build directory
+watch, w                    Runs Build task, and the serves the project in 
+                                browser
+clean-all, c                Delete the contents of the build directories
+
+lint, l                     Run ES-lint
+
+help, h                     Show this help guide        

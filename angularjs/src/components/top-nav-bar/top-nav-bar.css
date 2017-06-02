@@ -1,0 +1,5 @@
+/*#navbar > ul > li:nth-child(1) > a*/
+
+.navbar-inverse .navbar-nav > li > a.active {
+    color: #ffffff;
+}
