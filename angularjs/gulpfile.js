@@ -42,7 +42,7 @@ gulp.task('bs-reload', function (done) {
     done();
 })
 
-gulp.task('_build', sync.sync(['angular-scripts', 'template-cache', 'app-css', 'concat-template-cache-to-app-script', 'copy-workers-to-assets', 'vendor-scripts', 'app-images', 'copy-favicon', 'copy-files-to-build-directory', 'build-index']));
+gulp.task('_build', sync.sync(['angular-scripts', 'template-cache', 'app-css', 'concat-template-cache-to-app-script', 'copy-workers-to-assets', 'vendor-scripts', 'app-images', 'copy-favicon', 'copy-assets-dir', 'copy-files-to-build-directory', 'build-index']));
 
 // Define Environment Variables
 gulp.task('set-production-variable', function () {
@@ -129,6 +129,13 @@ gulp.task('copy-favicon', function () {
         .pipe($.plumber())
         .pipe($.expectFile({ errorOnFailure: true }, config.paths.srcFiles.faviconGlob).on('error', handleError))
         .pipe(gulp.dest(getBuildDirectory()));
+});
+
+gulp.task('copy-assets-dir', function () {
+    return gulp.src(config.paths.srcFiles.assets)
+        .pipe($.plumber())
+        .pipe($.expectFile({ errorOnFailure: true }, config.paths.srcFiles.assets).on('error', handleError))
+        .pipe(gulp.dest(getBuildDirectory() + '/' + config.output.directories.assets));
 });
 
 gulp.task('copy-files-to-build-directory', function () {
@@ -229,9 +236,7 @@ gulp.task('clean-all', function () {
 });
 
 gulp.task('lint', function () {
-    return gulp.src(config.paths.lintGlob)
-        .pipe($.plumber())
-        .pipe($.expectFile({ errorOnFailure: true }, config.paths.lintGlob).on('error', handleError))
+    return gulp.src(config.lintGlob)
         .pipe($.eslint())
         .pipe($.eslint.format())
         .pipe($.eslint.failAfterError());

@@ -25,11 +25,15 @@ paths.srcFiles = {
         paths.src + '/**/*.js',
         '!' + paths.src + '/vendor/**/*.js'
     ],
+    assets: paths.src + '/assets/**/*.*',
     cssGlob: [
-        'node_modules/leaflet/dist/leaflet.css',
+        'vendor/leaflet.css',
+        'node_modules/leaflet.markercluster/dist/MarkerCluster.css',
+        'node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css',
         'node_modules/bootstrap/dist/css/bootstrap.css',
-        'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css',  
+        'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css',
         'node_modules/angularjs-datepicker/dist/angular-datepicker.css',
+        'node_modules/ag-grid/dist/styles/ag-grid.css',
         paths.src + '/**/*.css'
     ],
     faviconGlob: [
@@ -40,7 +44,9 @@ paths.srcFiles = {
     templatesGlob: ['src/**/*.view.html'],
     workersGlob: paths.src + '/**/*.worker.js',
     vendorScriptsGlob: [
-        'node_modules/leaflet/dist/leaflet.js',
+        'node_modules/leaflet/dist/leaflet-src.js',
+        'node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js',
+        'node_modules/ag-grid/dist/ag-grid.js',
         'node_modules/angular/angular.js',
         'node_modules/angularjs-datepicker/dist/angular-datepicker.js',
         'node_modules/angular-simple-logger/dist/angular-simple-logger.js',
@@ -49,13 +55,11 @@ paths.srcFiles = {
         'node_modules/ui-leaflet/dist/ui-leaflet.js'
     ],
     copyToBuildDirectoryGlob: [
-        
+
     ]
 };
 
-var lintGlob = [
-    paths.src
-];
+var lintGlob = 'src/**/*.js';
 
 var watch = [
     paths.src + '/**/*.*',

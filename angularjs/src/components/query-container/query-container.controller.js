@@ -1,31 +1,30 @@
 (function () {
     'use strict';
-    
+
     angular
         .module('app')
         .controller('QueryContainerController', QueryContainerController);
-    
-    function QueryContainerController(DataService) {
+
+    function QueryContainerController(DataService, StateService) {
         'ngInject';
 
-        this.dateOptions = {
-            
-        }
-
         this.inputs = {
-            selectors: '5376462406'
+            seedsStr: ''
         };
 
         this.submit = function () {
-            if (this.inputs.selectors) {
-                this.inputs.seed = this.inputs.selectors;
-                delete this.inputs.selectors;
+            if (this.inputs.seedsStr) {
+                this.inputs.seed = this.inputs.seedsStr.split(',');
+                this.inputs.seed = this.inputs.seed.map(Function.prototype.call, String.prototype.trim);
+            } else {
+                this.inputs.seed = '';
             }
-            
-            console.log(this.inputs);
-            DataService.getData(this.inputs).then(function (results) {
-                console.log(results);
-            })
+
+            DataService.getAllData(JSON.parse(JSON.stringify(this.inputs))).then(function (results) {
+                StateService.saveData(results);
+            }).catch(function (err) {
+                console.error(err);
+            });
         }.bind(this);
     }
 })();

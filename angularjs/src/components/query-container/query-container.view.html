@@ -1,17 +1,10 @@
 <form novalidate>
     <div class="form-group">
         <label for="selectorInput">Selectors</label>
-        <textarea id="selectorInput" class="form-control" ng-model="$ctrl.inputs.selectors" placeholder=""></textarea>
+        <textarea id="selectorInput" class="form-control" ng-model="$ctrl.inputs.seedsStr" placeholder="Comma Seperate multiple values"></textarea>
     </div>
     <div class="form-group">
         <label for="startDateInput">Date</label>
-
-
-        <!--<span class="input-group-addon">$</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-            <span class="input-group-addon">.00</span>-->
-
-
         <div class="input-group">
             <datepicker date-format="yyyy-MM-dd">
                 <input ng-model="$ctrl.inputs.date.start" class="form-control" placeholder="Start date" />
@@ -31,7 +24,7 @@
         </select>
     </div>
 
-    <pre>{{$ctrl.inputs | json}}</pre>
+    <!--<pre>{{$ctrl.inputs | json}}</pre>-->
 
     <button type="submit" class="btn btn-default" ng-click="$ctrl.submit($ctrl.inputs)">Submit</button>
     <button type="reset" class="btn btn-default" ng-click="$ctrl.reset()">Reset</button>

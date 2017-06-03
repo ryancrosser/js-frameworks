@@ -34,7 +34,7 @@ module.exports = {
 
       'default-case': 1,
 
-      'prefer-const': 0,Ï
+      'prefer-const': 0,
       'func-names': 0,
       'no-use-before-define': 0,
       'vars-on-top': 0,
