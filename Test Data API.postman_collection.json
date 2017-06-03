@@ -1,0 +1,156 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Test Data API",
+		"_postman_id": "dd8b0b28-470f-40fd-d3e7-abd3941f093e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Data",
+			"request": {
+				"url": "https://test-data-api.herokuapp.com/data",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "First 10",
+			"request": {
+				"url": {
+					"raw": "https://test-data-api.herokuapp.com/data?_limit=10",
+					"protocol": "https",
+					"auth": {},
+					"host": [
+						"test-data-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "_limit",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Date Range",
+			"request": {
+				"url": {
+					"raw": "https://test-data-api.herokuapp.com/data?date_gte=2017-05-01&date_lte=2017-05-05",
+					"protocol": "https",
+					"auth": {},
+					"host": [
+						"test-data-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "date_gte",
+							"value": "2017-05-01",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "date_lte",
+							"value": "2017-05-05",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Seed",
+			"request": {
+				"url": {
+					"raw": "https://test-data-api.herokuapp.com/data?seed=5376462406",
+					"protocol": "https",
+					"auth": {},
+					"host": [
+						"test-data-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "seed",
+							"value": "5376462406",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Seed - No Results",
+			"request": {
+				"url": {
+					"raw": "https://test-data-api.herokuapp.com/data?seed=000",
+					"protocol": "https",
+					"auth": {},
+					"host": [
+						"test-data-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "seed",
+							"value": "000",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
