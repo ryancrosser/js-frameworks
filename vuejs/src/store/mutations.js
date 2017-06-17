@@ -1,3 +1,4 @@
+/* @flow */
 import { QUERY_RESULTS_RETREIVED, QUERY_RESULTS_ERROR } from './constants';
 
 export default {

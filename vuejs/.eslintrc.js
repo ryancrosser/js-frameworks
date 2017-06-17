@@ -12,7 +12,8 @@ module.exports = {
   extends: 'airbnb-base',
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html',
+    "flowtype-errors"
   ],
   // check if imports actually resolve
   'settings': {
@@ -24,6 +25,7 @@ module.exports = {
   },
   // add your custom rules here
   'rules': {
+    "flowtype-errors/show-errors": 2,
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       'js': 'never',

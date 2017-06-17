@@ -11,9 +11,7 @@
              :max-zoom="maxZoom">
 
         <v-tilelayer :url="tileProvider.url"
-                     :attribution="tileProvider.attribution"
-
-                     :token="token"></v-tilelayer>
+                     :attribution="tileProvider.attribution"></v-tilelayer>
 
         <v-marker-cluster>
           <v-marker v-for="item in markers"

@@ -8,9 +8,10 @@
 </template>
 
 <script>
-import topMenu from '@/components/TopMenu';
-
+/* @flow */
 import 'bootstrap-css-only/css/bootstrap.css';
+
+import topMenu from './components/TopMenu';
 
 export default {
   name: 'app',

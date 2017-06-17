@@ -1,5 +1,6 @@
+/* @flow */
 export default {
-  data(state) {
+  data(state: any) {
     return state.data;
   }
 };
