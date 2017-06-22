@@ -17,10 +17,8 @@
           <v-marker v-for="item in markers"
                     :key="item.id"
                     :lat-lng="item.position"
-                    v-on:l-click="alert(item)"
                     :icon="item.icon">
             <v-popup :content="item.tooltip"></v-popup>
-            <v-tooltip :content="item.tooltip"></v-tooltip>
           </v-marker>
         </v-marker-cluster>
       </v-map>
@@ -89,9 +87,13 @@ export default {
       const markers = [];
 
       data.forEach((d) => {
+        const html = `<strong>Seed: </strong>${d.seed}</br>
+                      <strong>Contacts: </strong>${d.contact.join(', ')}</br>
+                      <strong>Activity Type: </strong>${d.activityType}</br>`;
+
         const newMarker = {
           position: { lat: d.latitude, lng: d.longitude },
-          tooltip: 'tooltip for marker4',
+          tooltip: html,
           draggable: true,
           visible: true,
           icon: L.icon.glyph({
