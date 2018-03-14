@@ -6,7 +6,7 @@
     </div>
     <div class="col-xs-9 un-col">
       <div style="height:calc(70vh - 26px); overflow-y:auto">
-        <rkc-map></rkc-map>
+        <esri-map></esri-map>
       </div>
       <div style="height:calc(30vh - 25px)">
         <grid></grid>
@@ -17,7 +17,8 @@
 
 <script>
 import query from '@/components/Query';
-import map from '@/components/RKCMap';
+import leafletMap from '@/components/RKCMap';
+import esriMap from '@/components/EsriMap';
 import grid from '@/components/Grid';
 
 
@@ -30,7 +31,8 @@ export default {
   },
   components: {
     query,
-    'rkc-map': map,
+    'rkc-map': leafletMap,
+    'esri-map': esriMap,
     grid
   }
 };
