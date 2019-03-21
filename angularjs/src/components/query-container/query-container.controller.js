@@ -9,7 +9,7 @@
         'ngInject';
 
         this.inputs = {
-            seedsStr: ''
+            seedsStr: '5376462406'
         };
 
         this.submit = function () {
