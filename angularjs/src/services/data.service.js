@@ -6,7 +6,7 @@
         .service('DataService', DataService);
 
     function DataService($http, $q) {
-        this.url = '//test-data-api.herokuapp.com/data';
+        this.url = '//dataapi2.herokuapp.com/data';
 
         this.getAllData = function (params) {
             var deferred = $q.defer();

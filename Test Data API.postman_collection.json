@@ -10,7 +10,7 @@
 		{
 			"name": "All Data",
 			"request": {
-				"url": "https://test-data-api.herokuapp.com/data",
+				"url": "https://dataapi2.herokuapp.com/data",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -22,11 +22,11 @@
 			"name": "First 10",
 			"request": {
 				"url": {
-					"raw": "https://test-data-api.herokuapp.com/data?_limit=10",
+					"raw": "https://dataapi2.herokuapp.com/data?_limit=10",
 					"protocol": "https",
 					"auth": {},
 					"host": [
-						"test-data-api",
+						"dataapi2",
 						"herokuapp",
 						"com"
 					],
@@ -54,11 +54,11 @@
 			"name": "Date Range",
 			"request": {
 				"url": {
-					"raw": "https://test-data-api.herokuapp.com/data?date_gte=2017-05-01&date_lte=2017-05-05",
+					"raw": "https://dataapi2.herokuapp.com/data?date_gte=2017-05-01&date_lte=2017-05-05",
 					"protocol": "https",
 					"auth": {},
 					"host": [
-						"test-data-api",
+						"dataapi2",
 						"herokuapp",
 						"com"
 					],
@@ -92,11 +92,11 @@
 			"name": "Get By Seed",
 			"request": {
 				"url": {
-					"raw": "https://test-data-api.herokuapp.com/data?seed=5376462406",
+					"raw": "https://dataapi2.herokuapp.com/data?seed=5376462406",
 					"protocol": "https",
 					"auth": {},
 					"host": [
-						"test-data-api",
+						"dataapi2",
 						"herokuapp",
 						"com"
 					],
@@ -124,11 +124,11 @@
 			"name": "Get By Seed - No Results",
 			"request": {
 				"url": {
-					"raw": "https://test-data-api.herokuapp.com/data?seed=000",
+					"raw": "https://dataapi2.herokuapp.com/data?seed=000",
 					"protocol": "https",
 					"auth": {},
 					"host": [
-						"test-data-api",
+						"dataapi2",
 						"herokuapp",
 						"com"
 					],
